@@ -24,7 +24,7 @@ public class StudentRepository {
     public void addStudentTeacherPair(String student, String teacher){
         List<String> students= pairDb.get(teacher);
         if(students == null){
-            new ArrayList<>();
+            students = new ArrayList<>();
         }
         students.add(student);
         pairDb.put(teacher,students);
