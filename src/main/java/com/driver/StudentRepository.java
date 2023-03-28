@@ -58,7 +58,7 @@ public class StudentRepository {
     }
 
     public void deleteAllTeachers(){
-        for(Teacher teacher : teacherDb.values()){
+        for(String teacher : teacherDb.keySet()){
             for(String student : pairDb.get(teacher)){
                 studentDb.remove(student);
             }
